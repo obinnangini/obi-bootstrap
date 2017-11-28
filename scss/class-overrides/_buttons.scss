@@ -1,0 +1,41 @@
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value, darken($value, 10%));
+
+    &:focus,
+    &.focus {
+      box-shadow: $obi-btn-box-shadow;
+    }
+
+    &.disabled,
+    &:disabled {
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        background-color: $value;
+        border-color: $value;
+      }
+    }
+  }
+
+  .btn-outline-#{$color} {
+    &:focus,
+    &.focus {
+      box-shadow: $obi-btn-box-shadow;
+    }
+
+    &.disabled,
+    &:disabled {
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        color: $value;
+        background-color: transparent;
+      }
+    }
+  }
+}

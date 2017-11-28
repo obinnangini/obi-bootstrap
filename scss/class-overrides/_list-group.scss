@@ -1,0 +1,11 @@
+.list-group-item {
+  border-width: 0;
+
+  &.active {
+    z-index: 0;
+  }
+
+  &:not(:last-child) {
+    border-bottom-width: 0.1rem;
+  }
+}

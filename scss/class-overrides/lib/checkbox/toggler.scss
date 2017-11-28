@@ -1,0 +1,443 @@
+.wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 400px;
+	margin: 50vh auto 0;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.switch_box{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 200px;
+	min-width: 200px;
+	height: 200px;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+/* Switch 1 Specific Styles Start */
+
+.box_1{
+	background: #eee;
+}
+
+input[type="checkbox"].switch_1{
+	font-size: 30px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  &:checked{
+    background: #0ebeff;
+    &:after{
+     left: calc(100% - 1.5em);
+    }
+  }
+  &:after{
+    position: absolute;
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+            box-shadow: 0 0 .25em rgba(0,0,0,.3);
+    -webkit-transform: scale(.7);
+            transform: scale(.7);
+    left: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+}
+
+/* Switch 2 Specific Style Start */
+
+.box_2{
+	background: #666;
+}
+
+input[type="checkbox"].switch_2{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100px;
+  height: 8px;
+  background: #444;
+  border-radius: 5px;
+  position: relative;
+  outline: 0;
+  cursor: pointer;
+  &:before,
+  &:after{
+    position: absolute;
+    content: "";
+    -webkit-transition: all .25s;
+    transition: all .25s;
+  }
+
+  &:before{
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border: 5px solid #666;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+  &:after{
+    width: 30px;
+    height: 30px;
+    background: #666;
+    border-radius: 50%;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+
+  &:checked {
+    &:before{
+      left: calc(100% - 35px);
+    }
+
+    &:after{
+      left: 75px;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+}
+
+
+
+/* Switch 2 Specific Style End */
+
+
+/* Switch 3 Specific Style Start */
+
+.box_3{
+	background: #19232b;
+}
+
+.toggle_switch{
+  width: 100px;
+  height: 45px;
+  position: relative;
+}
+
+input[type="checkbox"].switch_3{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: 0;
+  z-index: 1;
+
+  &:checked {
+    & + svg.checkbox {
+      .outer-ring{
+        -webkit-animation: animateRing .35s ease-in-out forwards;
+                animation: animateRing .35s ease-in-out forwards;
+      }
+      .is_checked{
+        opacity: 1;
+        -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg);
+      }
+      .is_unchecked{
+        opacity: 0;
+        -webkit-transform: translateX(-200%) rotate(180deg);
+                transform: translateX(-200%) rotate(180deg);
+      }
+    }
+  }
+}
+
+svg.checkbox{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .outer-ring{
+    stroke-dasharray: 375;
+    stroke-dashoffset: 375;
+    -webkit-animation: resetRing .35s ease-in-out forwards;
+            animation: resetRing .35s ease-in-out forwards;
+  }
+
+  .is_checked{
+    opacity: 0;
+    fill: yellow;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: translateX(200%) rotate(45deg);
+            transform: translateX(200%) rotate(45deg);
+    -webkit-transition: all .35s;
+    transition: all .35s;
+  }
+
+  .is_unchecked{
+    opacity: 1;
+    fill: #fff;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    -webkit-transition: all .35s;
+    transition: all .35s;
+  }
+}
+
+@-webkit-keyframes animateRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #b0aa28;
+  }
+}
+
+@keyframes animateRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #b0aa28;
+  }
+}
+
+@-webkit-keyframes resetRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #233043;
+  }
+}
+
+@keyframes resetRing{
+  to{
+    stroke-dashoffset: 0;
+    stroke: #233043;
+  }
+}
+
+/* Switch 3 Specific Style End */
+
+
+/* Switch 4 Specific Style Start */
+
+.box_4{
+	background: #eee;
+}
+
+.input_wrapper{
+  width: 80px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+
+  input[type="checkbox"]{
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: #315e7f;
+    border-radius: 2px;
+    position: relative;
+    outline: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+
+    &:after{
+      position: absolute;
+      content: "";
+      top: 3px;
+      left: 3px;
+      width: 34px;
+      height: 34px;
+      background: #dfeaec;
+      z-index: 2;
+      border-radius: 2px;
+      -webkit-transition: all .35s;
+      transition: all .35s;
+    }
+    svg{
+      position: absolute;
+      top: 50%;
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      fill: #fff;
+      -webkit-transition: all .35s;
+      transition: all .35s;
+      z-index: 1;
+    }
+    .is_checked{
+      width: 18px;
+      left: 18%;
+      -webkit-transform: translateX(190%) translateY(-30%) scale(0);
+              transform: translateX(190%) translateY(-30%) scale(0);
+    }
+
+    .is_unchecked{
+      width: 15px;
+      right: 10%;
+      -webkit-transform: translateX(0) translateY(-30%) scale(1);
+              transform: translateX(0) translateY(-30%) scale(1);
+    }
+    /* Checked State */
+    &:checked{
+      background: #23da87;
+      &:after{
+        left: calc(100% - 37px);
+      }
+      & + .is_checked{
+        -webkit-transform: translateX(0) translateY(-30%) scale(1);
+                transform: translateX(0) translateY(-30%) scale(1);
+      }
+      & ~ .is_unchecked{
+        -webkit-transform: translateX(-190%) translateY(-30%) scale(0);
+                transform: translateX(-190%) translateY(-30%) scale(0);
+      }
+    }
+  }
+}
+
+.tgl {
+	display: none;
+
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+
+		&:after {
+			left: 0;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+}
+
+.tgl-skewed {
+	+ .tgl-btn {
+		overflow: hidden;
+		// transform: skew(-10deg);
+		backface-visibility: hidden;
+		transition: all .2s ease;
+		font-family: sans-serif;
+		background: #888;
+		&:after,
+    &:before {
+			// transform: skew(10deg);
+			display: inline-block;
+			transition: all .2s ease;
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			line-height: 2em;
+			font-weight: bold;
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(0,0,0,.4);
+		}
+
+		&:after {
+			left: 100%;
+			content: attr(data-tg-on);
+      color: #000;
+		}
+
+		&:before {
+			left: 0;
+			content: attr(data-tg-off);
+		}
+
+		&:active {
+			background: #888;
+			&:before {
+				left: -10%;
+			}
+		}
+	}
+
+	&:checked + .tgl-btn {
+    // background: #86d993;
+    background: #fff;
+    &:before {
+      left: -100%;
+    }
+
+    &:after {
+      left: 0;
+    }
+
+    &:active:after {
+      left: 10%;
+    }
+	}
+}

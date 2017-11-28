@@ -1,0 +1,13 @@
+@import 'obi-common';
+
+html.dark {
+  @import 'dark-variables';
+  @import '~bootstrap/scss/bootstrap';
+  @import 'class-overrides/index';
+}
+
+html.light {
+  @import 'light-variables';
+  @import '~bootstrap/scss/bootstrap';
+  @import 'class-overrides/index';
+}

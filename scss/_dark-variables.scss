@@ -1,0 +1,117 @@
+// Reboot
+
+$obi-body-bg: $grey-875;
+$obi-secondary-bg: $grey-925;
+$obi-body-color: #D1D1D1;
+$obi-default-border: #555;
+// $component-active-bg: #0AB6E3;
+$obi-highlight-color: #0AB6E3;
+$obi-disabled-color: rgba(#555, 0.7);
+$obi-border-color: $grey-400;
+$obi-disabled-bg: $grey-600;
+$obi-active-bg: $black;
+$obi-dark-border-color: $grey-700;
+$obi-component-active-color: $white;
+$obi-btn-box-shadow: none;
+
+$theme-colors: (
+  primary: $obi-highlight-color,
+  secondary: $grey-700,
+  success: $green-500,
+  info: $cyan-500,
+  warning: $amber-800,
+  danger: $red-500,
+  light: $grey-400,
+  dark: $grey-800
+);
+
+$component-active-color: $obi-component-active-color;
+$secondary-bg: $obi-secondary-bg; // TODO ?
+$body-bg: $obi-body-bg;
+$body-color: $obi-body-color;
+$border-color: $obi-border-color;
+
+$breadcrumb-divider: '|';
+$breadcrumb-bg: $grey-800;
+$breadcrumb-active-color: $grey-400;
+
+$card-bg: $obi-secondary-bg;
+$card-cap-bg: #404040;
+$card-border-color: $black;
+
+// $nav-tabs-border-color: $obi-border-color;
+$nav-link-disabled-color: $obi-disabled-color;
+$nav-tabs-link-active-color: $obi-component-active-color;
+$nav-tabs-link-active-bg: $obi-active-bg;
+
+// $nav-underline-divider: '|';
+$nav-underline-link-color: $obi-body-color;
+$nav-underline-link-active-color: $obi-highlight-color;
+$nav-underline-link-active-border-color: $obi-highlight-color;
+
+$navbar-light-color: $obi-body-color;
+$navbar-light-hover-color: $obi-component-active-color;
+$navbar-light-active-color: $obi-component-active-color;
+$navbar-light-disabled-color: $obi-disabled-color;
+
+$pagination-bg: $grey-825;
+$pagination-color: $obi-body-color;
+$pagination-border-color: $obi-secondary-bg;
+$pagination-hover-bg: $obi-active-bg;
+$pagination-hover-border-color: $obi-secondary-bg;
+$pagination-active-bg: $obi-active-bg;
+$pagination-active-color: $obi-highlight-color;
+$pagination-active-border-color: $obi-secondary-bg;
+$pagination-disabled-bg: $obi-disabled-bg;
+$pagination-disabled-color: rgba($obi-body-color, 0.75);
+$pagination-disabled-border-color: $obi-secondary-bg;
+
+$popover-bg: $obi-secondary-bg;
+$popover-header-bg: $obi-active-bg;
+$popover-header-color: $obi-body-color;
+// $popover-body-color: $obi-body-color;
+$popover-border-color: $obi-dark-border-color;
+
+$modal-content-bg: $obi-active-bg;
+$modal-content-border-color: $obi-dark-border-color;
+$modal-header-border-color: $obi-dark-border-color;
+$modal-footer-border-color: $obi-dark-border-color;
+$close-color: $obi-border-color;
+
+$dropdown-bg: $obi-active-bg;
+$dropdown-link-color: $obi-body-color;
+$dropdown-link-active-color: $obi-component-active-color;
+$dropdown-link-active-bg: $obi-active-bg;
+$dropdown-link-hover-color: $obi-component-active-color;
+$dropdown-link-hover-bg: $obi-active-bg;
+$dropdown-link-disabled-color: $obi-disabled-color;
+
+$list-group-bg: $obi-secondary-bg;
+$list-group-border-color: $obi-border-color;
+$list-group-active-bg: $obi-active-bg;
+$list-group-hover-bg: $obi-active-bg;
+$list-group-action-color: $obi-body-color;
+$list-group-active-border-color: $obi-border-color;
+$list-group-action-hover-color: $obi-component-active-color;
+$list-group-action-active-bg: $obi-active-bg;
+
+$btn-focus-box-shadow: $obi-btn-box-shadow;
+$btn-active-box-shadow: $obi-btn-box-shadow;
+
+$jumbotron-bg: $obi-secondary-bg;
+
+$input-bg: $obi-active-bg;
+$input-color: $obi-body-color;
+$input-disabled-bg: $obi-disabled-bg;
+$input-placeholder-color: #999;
+
+$input-group-addon-bg: $obi-secondary-bg;
+
+// ag-Grid
+
+$ag-background-1: $obi-body-bg;
+$ag-row-odd-background-color: $obi-body-bg;
+$ag-row-even-background-color: $black;
+$ag-foreground-1: $obi-body-color;
+$ag-header-foreground-1: $obi-body-color;
+$obi-ag-grid-filter: invert(0.9);

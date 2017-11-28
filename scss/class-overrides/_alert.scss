@@ -1,0 +1,9 @@
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(transparent, $value, $value);
+
+    .alert-link {
+      text-decoration: underline;
+    }
+  }
+}

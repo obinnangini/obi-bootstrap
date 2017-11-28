@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["node_modules", "scss/class-overrides/lib/**"],
+  "rules": {
+    "color-hex-case": "upper",
+    "max-nesting-depth": null,
+    "order/properties-alphabetical-order": null,
+    "selector-max-compound-selectors": 5,
+    "selector-no-qualifying-type": null
+  }
+}

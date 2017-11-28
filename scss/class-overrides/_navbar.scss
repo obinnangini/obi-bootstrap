@@ -1,0 +1,17 @@
+.navbar {
+  .navbar-icon {
+    padding: $navbar-padding-y $navbar-padding-x;
+  }
+
+  &.navbar-dark {
+    .navbar-icon {
+      color: $navbar-dark-color;
+    }
+  }
+
+  &.navbar-light {
+    .navbar-icon {
+      color: $navbar-light-color;
+    }
+  }
+}
