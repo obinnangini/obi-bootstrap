@@ -107,11 +107,8 @@ $input-placeholder-color: #999;
 
 $input-group-addon-bg: $obi-secondary-bg;
 
-// ag-Grid
+$table-bg: $obi-body-bg;
+$table-accent-bg: $obi-secondary-bg;
+$table-hover-bg: $obi-secondary-bg;
 
-$ag-background-1: $obi-body-bg;
-$ag-row-odd-background-color: $obi-body-bg;
-$ag-row-even-background-color: $black;
-$ag-foreground-1: $obi-body-color;
-$ag-header-foreground-1: $obi-body-color;
 $obi-ag-grid-filter: invert(0.9);
