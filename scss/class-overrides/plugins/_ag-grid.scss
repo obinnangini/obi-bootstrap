@@ -1,3 +1,84 @@
 .ag-header-icon {
   filter: $obi-ag-grid-filter;
 }
+
+.ag-theme-bootstrap {
+  background-color: $table-bg;
+  color: $obi-body-color;
+
+  .ag-header {
+    color: $obi-body-color;
+    border-top: 0.083333rem solid $obi-border-color;
+    border-bottom: 0.083333rem solid $obi-border-color;
+  }
+
+  .ag-body {
+    background-color: $table-bg;
+  }
+
+  .ag-row {
+    &.ag-row-even {
+      background-color: $table-bg;
+
+      &.ag-row-hover {
+        background-color: darken($table-bg, 10%);
+      }
+    }
+
+    &.ag-row-odd {
+      background-color: $table-accent-bg;
+
+      &.ag-row-hover {
+        background-color: darken($table-accent-bg, 10%);
+      }
+    }
+
+
+
+    &.ag-row-selected {
+
+    }
+  }
+
+  .ag-menu {
+    color: $obi-body-color;
+  }
+
+  .ag-filter-body,
+  .ag-filter-filter,
+  .ag-filter-select {
+    background-color: $obi-secondary-bg;
+    color: $obi-body-color;
+  }
+
+  .ag-menu,
+  .ag-filter-body {
+    background-color: $obi-secondary-bg;
+  }
+
+  .ag-cell,
+  .ag-header-cell {
+    border-left: 0.083333rem solid $obi-border-color;
+    border-right: 0.083333rem solid $obi-border-color;
+    border-bottom-width: 0;
+    border-top-width: 0;
+  }
+
+  .ag-cell-edit-input {
+    background-color: $input-bg;
+    color: $obi-body-color;
+    border: 0.083333rem solid $obi-border-color;
+  }
+
+  &.ag-bordered {
+    .ag-header {
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    .ag-cell,
+    .ag-header-cell {
+      border: 0.083333rem solid $obi-border-color;
+    }
+  }
+}
