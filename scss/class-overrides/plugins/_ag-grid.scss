@@ -21,7 +21,7 @@
       background-color: $table-bg;
 
       &.ag-row-hover {
-        background-color: darken($table-bg, 10%);
+        background-color: $obi-ag-grid-row-hover;
       }
     }
 
@@ -29,7 +29,7 @@
       background-color: $table-accent-bg;
 
       &.ag-row-hover {
-        background-color: darken($table-accent-bg, 10%);
+        background-color: $obi-ag-grid-row-hover;
       }
     }
   }
