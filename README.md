@@ -8,6 +8,11 @@ Add as a dependency in your `package.json`
 ```json
    "obi-bootstrap": "file:./obi-bootstrap-0.0.0.tgz"
 ```
+OR
+
+```json
+  "obi-bootstrap": "https://storage.googleapis.com/obi-bootstrap/obi-bootstrap-0.0.0.tgz"
+```
 Add a `dark` class to your html
 
 ```html
