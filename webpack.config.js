@@ -1,7 +1,8 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const configMethod = (minify) => {
   let outputFileBase = 'css/obi-bootstrap';
@@ -23,21 +24,18 @@ const configMethod = (minify) => {
       rules: [
         {
           test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: { loader: 'css-loader', options: cssLoaderOptions },
-          }),
+          use: [
+            MiniCssExtractPlugin.loader,
+            { loader: 'css-loader', options: cssLoaderOptions },
+          ],
         },
         {
           test: /\.scss$/,
-          use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [
-              { loader: 'css-loader', options: cssLoaderOptions },
-              { loader: 'resolve-url-loader' },
-              { loader: 'sass-loader', options: { sourceMap: true } },
-            ],
-          }),
+          use: [
+            MiniCssExtractPlugin.loader,
+            { loader: 'css-loader', options: cssLoaderOptions },
+            { loader: 'sass-loader', options: { sourceMap: true } },
+          ],
         },
         {
           test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -56,13 +54,30 @@ const configMethod = (minify) => {
     },
     plugins: [
       new StyleLintPlugin(),
-      new ExtractTextPlugin(outputFile),
+      new MiniCssExtractPlugin({
+        filename: outputFile,
+      }),
       new CopyWebpackPlugin([
         { from: './scss', to: 'scss' },
         { from: './node_modules/bootstrap/dist/js/bootstrap.js', to: 'js' },
         { from: './package.json', to: 'package.json' },
       ]),
     ],
+    optimization: {
+      minimizer: [
+        new OptimizeCSSAssetsPlugin({}),
+      ],
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.css$/,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
+    },
   };
 };
 

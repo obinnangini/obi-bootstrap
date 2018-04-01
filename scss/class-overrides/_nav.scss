@@ -3,6 +3,7 @@
     ~ .collapse {
       &.show {
         padding: 1rem;
+
         @include border-bottom-radius($nav-tabs-border-radius);
         // margin-left: 0.083333rem; //Line up collapse with tabs
         color: $nav-tabs-link-active-color;

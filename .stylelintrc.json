@@ -5,6 +5,7 @@
     "color-hex-case": "upper",
     "max-nesting-depth": null,
     "order/properties-alphabetical-order": null,
+    "order/order": null,
     "selector-max-compound-selectors": 5,
     "selector-no-qualifying-type": null
   }
